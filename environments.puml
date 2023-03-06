@@ -1,0 +1,66 @@
+@startuml environment
+!define AzurePuml https://raw.githubusercontent.com/plantuml-stdlib/Azure-PlantUML/release/2-2/dist
+!includeurl AzurePuml/AzureCommon.puml
+!includeurl AzurePuml/Networking/AzureVirtualNetwork.puml
+!includeurl AzurePuml/Compute/AzureVirtualMachine.puml
+!includeurl AzurePuml/Databases/AzureSqlServer.puml
+
+
+
+AzureVirtualNetwork(route, route, 2){
+	AzureVirtualMachine(route_Router_0, Router_0, D32s_v5)
+	AzureVirtualMachine(route_Router_1, Router_1, D32s_v5)
+	AzureVirtualMachine(route_WebDispatcher_0, WebDispatcher_0, D32s_v5)
+	AzureVirtualMachine(route_WebDispatcher_1, WebDispatcher_1, D32s_v5)
+	AzureVirtualMachine(route_WebDispatcher_2, WebDispatcher_2, D32s_v5)
+	AzureVirtualMachine(route_WebDispatcher_3, WebDispatcher_3, D32s_v5)
+	AzureSqlServer(route_Binder_0, Binder_0, D64s_v5)
+	AzureSqlServer(route_Binder_1, Binder_1, D64s_v5)
+	AzureSqlServer(route_Binder_2, Binder_2, D64s_v5)
+	AzureSqlServer(route_Binder_3, Binder_3, D64s_v5)
+	AzureSqlServer(route_Binder_4, Binder_4, D64s_v5)
+	AzureSqlServer(route_Binder_5, Binder_5, D64s_v5)
+}
+AzureVirtualNetwork(code, code, 2){
+	AzureVirtualMachine(code_Router_0, Router_0, D32s_v5)
+	AzureVirtualMachine(code_Router_1, Router_1, D32s_v5)
+	AzureVirtualMachine(code_WebDispatcher_0, WebDispatcher_0, D32s_v5)
+	AzureVirtualMachine(code_WebDispatcher_1, WebDispatcher_1, D32s_v5)
+	AzureVirtualMachine(code_WebDispatcher_2, WebDispatcher_2, D32s_v5)
+	AzureVirtualMachine(code_WebDispatcher_3, WebDispatcher_3, D32s_v5)
+	AzureSqlServer(code_Binder_0, Binder_0, D64s_v5)
+	AzureSqlServer(code_Binder_1, Binder_1, D64s_v5)
+	AzureSqlServer(code_Binder_2, Binder_2, D64s_v5)
+	AzureSqlServer(code_Binder_3, Binder_3, D64s_v5)
+	AzureSqlServer(code_Binder_4, Binder_4, D64s_v5)
+	AzureSqlServer(code_Binder_5, Binder_5, D64s_v5)
+}
+AzureVirtualNetwork(sharednp, sharednp, 2){
+	AzureVirtualMachine(sharednp_Router_0, Router_0, D32s_v5)
+	AzureVirtualMachine(sharednp_Router_1, Router_1, D32s_v5)
+	AzureVirtualMachine(sharednp_WebDispatcher_0, WebDispatcher_0, D32s_v5)
+	AzureVirtualMachine(sharednp_WebDispatcher_1, WebDispatcher_1, D32s_v5)
+	AzureVirtualMachine(sharednp_WebDispatcher_2, WebDispatcher_2, D32s_v5)
+	AzureVirtualMachine(sharednp_WebDispatcher_3, WebDispatcher_3, D32s_v5)
+	AzureSqlServer(sharednp_Binder_0, Binder_0, D64s_v5)
+	AzureSqlServer(sharednp_Binder_1, Binder_1, D64s_v5)
+	AzureSqlServer(sharednp_Binder_2, Binder_2, D64s_v5)
+	AzureSqlServer(sharednp_Binder_3, Binder_3, D64s_v5)
+	AzureSqlServer(sharednp_Binder_4, Binder_4, D64s_v5)
+	AzureSqlServer(sharednp_Binder_5, Binder_5, D64s_v5)
+}
+AzureVirtualNetwork(sharedp, sharedp, 2){
+	AzureVirtualMachine(sharedp_Router_0, Router_0, D32s_v5)
+	AzureVirtualMachine(sharedp_Router_1, Router_1, D32s_v5)
+	AzureVirtualMachine(sharedp_WebDispatcher_0, WebDispatcher_0, D32s_v5)
+	AzureVirtualMachine(sharedp_WebDispatcher_1, WebDispatcher_1, D32s_v5)
+	AzureVirtualMachine(sharedp_WebDispatcher_2, WebDispatcher_2, D32s_v5)
+	AzureVirtualMachine(sharedp_WebDispatcher_3, WebDispatcher_3, D32s_v5)
+	AzureSqlServer(sharedp_Binder_0, Binder_0, D64s_v5)
+	AzureSqlServer(sharedp_Binder_1, Binder_1, D64s_v5)
+	AzureSqlServer(sharedp_Binder_2, Binder_2, D64s_v5)
+	AzureSqlServer(sharedp_Binder_3, Binder_3, D64s_v5)
+	AzureSqlServer(sharedp_Binder_4, Binder_4, D64s_v5)
+	AzureSqlServer(sharedp_Binder_5, Binder_5, D64s_v5)
+}
+@enduml
