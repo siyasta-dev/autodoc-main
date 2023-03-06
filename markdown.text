@@ -1,0 +1,22 @@
+This is a Architecture diagram showing how the environments are linked together using the JSON files.
+The content is put together by couting the VM instances int he JSON as well as understanding in the JSON, there is a network architecture present.
+The powershell should understand from Azure that:
+- Each environment is in its own subscription and its own resource group (azure infra syntax)
+- There is a network peering between the environemnts outlined
+- The stencils from the AzurePUML page should be used to draw the diagram in PUML using Powershell
+
+Once this SVG file of this PUML is generated, powershell can do the lifting and perform the following actions in sequence:
+1. Header 1 - Text
+2. Markdown.text content imported into markdown.md
+3. header 2 - Code Sample
+4. Markdown.JSON code squotes included 1-by1 for each environment inside markdown.md
+5. Header 3 - PUML Drawing
+6. Import of SVG to load in this section
+
+Files left behind in the repo should be:
+
+.jsons
+.text
+.puml (code written from workflow by Github Action (you can bring in the PUML Library in here with is 1 JAR file if its easier))
+.svg (Generated from rendering the PUML and exporting it out after Workflow run)
+.md (Main markdown file harmosing all files into one for content output)

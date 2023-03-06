@@ -1,0 +1,38 @@
+{
+    "Defaults": {
+        "HighAvailability": "No",
+        "DR_BCP": "No",
+        "AppServerSKU": "D16ds_v4",
+        "HANADatabaseSKU": "E32ds_v4"
+    },
+    "Network": {
+        "NetworkIndex": 2,
+        "NetworkPattern": "envnetwork",
+        "NetworkPeers": [
+            "route"
+        ]
+    },
+    "Modules": [
+        {
+            "Router": {
+                "InstanceCount": 2,
+                "ModuleTemplate": "Router",
+                "AppServerSKU": "D32s_v5"
+            }
+        },
+        {
+            "WebDispatcher": {
+                "InstanceCount": 4,
+                "ModuleTemplate": "WebDispatcher",
+                "AppServerSKU": "D32s_v5"
+            }
+        },
+        {
+            "Binder": {
+                "InstanceCount": 6,
+                "ModuleTemplate": "Binder",
+                "HANADatabaseSKU": "D64s_v5"
+            }
+        }
+    ]
+}

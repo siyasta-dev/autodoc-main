@@ -1,0 +1,8 @@
+{
+    "Environments": [
+        "route",
+        "code",
+        "sharednp",
+        "sharedp"
+    ]
+}
